@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Firebase.Database;
+using Firebase.Database.Query;
 
 namespace Milestone_2_Progress
 {
@@ -26,18 +28,22 @@ namespace Milestone_2_Progress
 
         }
 
-        private void loadBtn_Click_1(object sender, EventArgs e)
+        private async void loadBtn_Click_1(object sender, EventArgs e)
         {
-            //simulation.start();
+            var BeaconsSet = await client
+               .Child("Beacons/")//Prospect list
+               .OnceSingleAsync<Beacons>();
+            getBeacons(BeaconsSet);
 
-            getPopulationAsync();
+            onChildChanged();
         }
 
+        //draw parking lot
         private void button1_Click(object sender, EventArgs e)
         {
             Pen blackPen = new Pen(Color.Black, 0);
-            SolidBrush myBrush = new SolidBrush(Color.SkyBlue);
-            SolidBrush myBrush2 = new SolidBrush(Color.YellowGreen);
+            SolidBrush myBrush = new SolidBrush(Color.DarkCyan);
+            SolidBrush myBrush2 = new SolidBrush(Color.DarkGreen);
 
 
             // Create rectangle and Draw rectangle to screen.
@@ -61,28 +67,16 @@ namespace Milestone_2_Progress
 
 
         }
-        private async void getPopulationAsync() // grabs population from database 
-        {
 
 
-            //******************** Get initial list of beacons ***********************//
-            var BeaconsSet = await client
-               .Child("Beacons/")//Prospect list
-               .OnceSingleAsync<Beacons>();
-            getBeacons(BeaconsSet);
-
-            //******************** Get changes on beacons ***********************//
-            onChildChanged();
-
-
-        }
-
-
-        private void getBeacons(Beacons beacons) // Selects the individuals to vaccinate
+        private void getBeacons(Beacons beacons)
         {
             foreach (var beacon in beacons.data)
             {
                 Console.WriteLine($"beacon id: { beacon.Id} [{ beacon.D1}]");
+                Console.WriteLine($"beacon id: { beacon.Id} [{ beacon.D2}]");
+                Console.WriteLine($"beacon id: { beacon.Id} [{ beacon.D3}]");
+                Console.WriteLine($"beacon id: { beacon.Id} [{ beacon.D4}]");
             }
 
         }
@@ -97,8 +91,18 @@ namespace Milestone_2_Progress
             var subscription = observable
                 .Subscribe(x =>
                 {
-
+                    beacon.data[Int32.Parse(x.Key)].update(x.Object);
+                    Point p = Beacons.data[Int32.Parse(x.Key)];
                     Console.WriteLine($"beacon id: { x.Object.Id} [{ x.Object.D1}]");
+                    Console.WriteLine($"beacon id: { x.Object.Id} [{ x.Object.D2}]");
+                    Console.WriteLine($"beacon id: { x.Object.Id} [{ x.Object.D3}]");
+                    Console.WriteLine($"beacon id: { x.Object.Id} [{ x.Object.D4}]");
+
+                    //determine which parking slot is filled
+                    if (p.y >= 0 && p.y <=2)
+                    {
+                        //int index = int(Math.Floor(p.x / 1.5) + 6);
+                    }
 
 
                 });
