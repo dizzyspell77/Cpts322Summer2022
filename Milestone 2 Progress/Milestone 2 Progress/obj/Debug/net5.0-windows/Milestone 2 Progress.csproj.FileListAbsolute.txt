@@ -1,0 +1,7 @@
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.csproj.AssemblyReference.cache
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone_2_Progress.Form1.resources
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.csproj.GenerateResource.cache
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.AssemblyInfoInputs.cache
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.AssemblyInfo.cs
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.csproj.CoreCompileInputs.cache

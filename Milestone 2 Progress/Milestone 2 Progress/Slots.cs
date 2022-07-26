@@ -43,7 +43,7 @@ namespace Milestone_2_Progress
 
     public class Point
     {
-
+        int P = 0;
     }
 
     public class isOccupied

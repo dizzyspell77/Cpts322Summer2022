@@ -9,7 +9,7 @@ namespace Milestone_2_Progress
     public class Beacons
     {
         public int Free { get; set; }
-        public int Total[] {get; set;}
-        public Beacon[] data { get; set; }
+        public int Total {get; set;}
+        public Beacon[];
     }
 }

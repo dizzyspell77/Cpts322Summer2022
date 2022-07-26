@@ -14,6 +14,6 @@ namespace Milestone_2_Progress
         public double D4 { get; set; }
         public long Id { get; set; }
         public long Time { get; set; }
-        public void Update {get; set;}
+        public int Update {get; set;}
     }
 }
