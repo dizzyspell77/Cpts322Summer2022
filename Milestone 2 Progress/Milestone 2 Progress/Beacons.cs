@@ -10,6 +10,6 @@ namespace Milestone_2_Progress
     {
         public int Free { get; set; }
         public int Total {get; set;}
-        public Beacon[];
+        public Beacon[] data;
     }
 }
