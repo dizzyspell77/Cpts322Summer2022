@@ -23,17 +23,11 @@ namespace Milestone_2_Progress
         Graphics G;
         Beacons BeaconsSet;
         Rectangle[] rect = new Rectangle[6];
-        Beacons beacons;
-        Sensors sensors;
 
         private void ParkingLot_Load(object sender, EventArgs e)
         {
             G = this.CreateGraphics();
-            sensors = new Sensors(4);
-            sensors.data[0].setCoord(0, 5);
-            sensors.data[1].setCoord(9, 5);
-            sensors.data[2].setCoord(0, 0);
-            sensors.data[3].setCoord(9, 0);
+
         }
 
         private async void loadBtn_Click_1(object sender, EventArgs e)
@@ -100,21 +94,47 @@ namespace Milestone_2_Progress
 
 
                     BeaconsSet.data[key].Update(x.Object);
-                    Point p = BeaconsSet.data[key].getXY(sensors);
+                    Point p = BeaconsSet.data[key].getXY(parkingLot.sensors);
+                    Console.WriteLine($"beacon id: { x.Object.Id} [{ x.Object.D1}]");
+                    Console.WriteLine($"beacon id: { x.Object.Id} [{ x.Object.D2}]");
+                    Console.WriteLine($"beacon id: { x.Object.Id} [{ x.Object.D3}]");
+                    Console.WriteLine($"beacon id: { x.Object.Id} [{ x.Object.D4}]");
 
-
-                    //get value
-                    Console.WriteLine($" value (x, y): {p.x}, {p.y}");
-
-             
+                    parkingLot.slots[i].makered();
 
                     //determine which parking slot contains Sensor
                     /*if (p.y >= 0 && p.y <=2)
                     //{
                         //int index = int(Math.Floor(p.x / 1.5) + 6);
                     //}*/
-                    
-               
+                    /*
+                    coordinate[0].x <= P.x;
+                    coordinate[1].x > P.x;
+                    coordinate[0].y <= P.y;
+                    coordinate[1].y > P.y;
+
+                    var child = client.Child("Beacons/data");
+                    var observable = child.AsObservable<Beacon>();
+                    var r1 = 0;
+                    var r2 = 0;
+                    var r3 = 0;
+                    var x1 = 0;
+                    var y1 = 5;
+                    var x2 = 9;
+                    var y2 = 1.5;
+                    var x3 = 0;
+                    var y3 = 7;
+                    var A = 2 * x2 - 2 * x1;
+                    var B = 2 * y2 - 2 * y1;
+                    var C = Math.Pow(r1, 2) - Math.Pow(r2, 2) - Math.Pow(x1, 2) + Math.Pow(x2, 2) - Math.Pow(y1, 2) + Math.Pow(y2, 2);
+                    var D = 2 * x3 - 2 * y2;
+                    var E = 2 * y3 - 2 * y2;
+                    var F = Math.Pow(r2, 2) - Math.Pow(r3, 2) - Math.Pow(x2, 2) + Math.Pow(x3, 2) - Math.Pow(y2, 2) + Math.Pow(y3, 2);
+                    var x = (C * E - F * B) / (E * A - B * D);
+                    var y = (C * D - A * F) / (B * D - A * E);
+                    var xResult = x;
+                    var yResult = y;
+                    */
                 });
 
         }

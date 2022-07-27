@@ -8,7 +8,16 @@ namespace Milestone_2_Progress
 {
     class Sensor
     {
-        void PrintPosition;
+        public Point location {get; set;}
+        public Sensor()
+        {
+            location = new Point();
+        }
+        public void setCoord(double x, double y)
+        {
+            location.x = x;
+            location.y = y;
+        }
 
         int Id { get; set; }
 

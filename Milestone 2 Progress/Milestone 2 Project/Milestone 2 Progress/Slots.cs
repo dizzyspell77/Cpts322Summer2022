@@ -11,7 +11,7 @@ namespace Milestone_2_Progress
     {
       
         public Slot[] data { get; set; }
-        public Point[] coordinates = new Point[4];
+
         public class isXY
         {
             public double x { get; set; }
@@ -21,22 +21,21 @@ namespace Milestone_2_Progress
 
     public class Slot
     {
-        private int spot;
         public int Total { get; set; }
         public Rectangle[] rect;
-        
-        public void DrawRect(Graphics G)
+        public Slot(int i)
         {
-            int x = 0;
-            int y = 0;
+            int x;
+            int y;
 
-            //if()
+            rect= new Rectangle(100 * i, 100, 100, 200);
+
         }
 
-       // public makeRed()
-        //{
+        public makeRed()
+        {
 
-        //}
+        }
 
 
         public bool isInside(Point P)

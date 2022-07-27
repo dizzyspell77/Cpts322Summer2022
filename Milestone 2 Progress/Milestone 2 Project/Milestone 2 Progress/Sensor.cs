@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Milestone_2_Progress
 {
-    class User
+    class Sensor
     {
-        public string UserName = "";
-        public string Password = "";
+        int PrintPosition;
+
+        int Id { get; set; }
+
     }
 }

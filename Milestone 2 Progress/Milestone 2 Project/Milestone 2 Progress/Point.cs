@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Milestone_2_Progress
 {
-    class User
+    public class Point
     {
-        public string UserName = "";
-        public string Password = "";
+        int x;
+        int y;
     }
 }

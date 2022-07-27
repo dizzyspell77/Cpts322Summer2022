@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Milestone_2_Progress
 {
-    class Point
+    public class Point
     {
+        public double x { get; set; }
+        public double y { get; set; }
+
     }
 }

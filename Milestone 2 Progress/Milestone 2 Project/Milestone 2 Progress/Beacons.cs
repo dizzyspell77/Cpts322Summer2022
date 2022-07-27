@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Milestone_2_Progress
 {
-    class User
+    public class Beacons
     {
-        public string UserName = "";
-        public string Password = "";
+        public int Free { get; set; }
+        public int Total {get; set;}
+        public Beacon[] data;
     }
 }
