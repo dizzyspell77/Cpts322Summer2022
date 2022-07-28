@@ -24,7 +24,7 @@ namespace Milestone_2_Progress
             {
                 this.Hide();
                 ParkingLot engine = new ParkingLot();
-                engine.ShowDialog();
+                //engine.ShowDialog();
                 this.Close();
 
             }

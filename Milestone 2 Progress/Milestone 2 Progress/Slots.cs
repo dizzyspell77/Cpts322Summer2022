@@ -53,11 +53,4 @@ namespace Milestone_2_Progress
     {
         //bool isVacant();
     }
-
-  
-
-    public class isNumber
-    {
-
-    }
 }

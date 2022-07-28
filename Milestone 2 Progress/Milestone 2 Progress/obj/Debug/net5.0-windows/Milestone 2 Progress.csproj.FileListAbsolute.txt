@@ -6,3 +6,20 @@ C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 P
 C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.AssemblyInfoInputs.cache
 C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.AssemblyInfo.cs
 C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.csproj.CoreCompileInputs.cache
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\Milestone 2 Progress.exe
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\Milestone 2 Progress.deps.json
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\Milestone 2 Progress.runtimeconfig.json
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\Milestone 2 Progress.runtimeconfig.dev.json
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\Milestone 2 Progress.dll
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\ref\Milestone 2 Progress.dll
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\Milestone 2 Progress.pdb
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\Firebase.dll
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\LiteDB.dll
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\System.Reactive.dll
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\bin\Debug\net5.0-windows\System.Runtime.InteropServices.WindowsRuntime.dll
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.csproj.CopyComplete
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.dll
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\ref\Milestone 2 Progress.dll
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.pdb
+C:\Users\theon\source\repos\Cpts322Summer2022\Milestone 2 Progress\Milestone 2 Progress\obj\Debug\net5.0-windows\Milestone 2 Progress.genruntimeconfig.cache

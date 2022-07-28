@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Milestone_2_Progress
 {
-    class Sensor
+    public class Sensor
     {
         public Point location {get; set;}
         public Sensor()

@@ -26,6 +26,30 @@ namespace Milestone_2_Progress
         Beacons beacons;
         Sensors sensors;
 
+    /*
+    public class DrawRectangle
+    {
+        public Color color { get; set; }
+        public float width { get; set; }
+        public Rectangle rect { get; set; }
+        public Control surface { get; set; }
+
+        public DrawRectangle(Rectangle r, Color c, float w, Control ct)
+        {
+            color = c;
+            width = w;
+            rect = r;
+            surface = ct;
+        }
+
+        public override string ToString()
+        {
+            return rect.ToString() + " (" + color.ToString() + 
+            " - " + width.ToString("0.00") + ") on " + surface.Name;
+        }
+    }
+    */
+
         private void ParkingLot_Load(object sender, EventArgs e)
         {
             G = this.CreateGraphics();
@@ -38,11 +62,8 @@ namespace Milestone_2_Progress
 
         private async void loadBtn_Click_1(object sender, EventArgs e)
         {
-            BeaconsSet = await client
-               .Child("Beacons/")//Prospect list
-               .OnceSingleAsync<Beacons>();
+            getPopulationAsync();
 
-            onChildChanged();
         }
 
         //draw parking lot
@@ -73,6 +94,15 @@ namespace Milestone_2_Progress
 
         }
 
+        private async void getPopulationAsync()
+        {
+            BeaconsSet = await client
+               .Child("Beacons/")//Prospect list
+               .OnceSingleAsync<Beacons>();
+
+            onChildChanged();
+        }
+
 
         private void getBeacons(Beacons beacons)
         {
@@ -89,14 +119,15 @@ namespace Milestone_2_Progress
 
         private void onChildChanged() // Waits for data base to start with variable
         {
-
-
+            var companyId = 2;
             var child = client.Child("Beacons/data");
             var observable = child.AsObservable<Beacon>();
             var subscription = observable
                 .Subscribe( x =>
                 {
                     int key = Int32.Parse(x.Key);
+                    int index;
+                    //beacons.data[int].update
 
 
                     BeaconsSet.data[key].Update(x.Object);
@@ -106,15 +137,26 @@ namespace Milestone_2_Progress
                     //get value
                     Console.WriteLine($" value (x, y): {p.x}, {p.y}");
 
-             
+
 
                     //determine which parking slot contains Sensor
-                    /*if (p.y >= 0 && p.y <=2)
-                    //{
-                        //int index = int(Math.Floor(p.x / 1.5) + 6);
-                    //}*/
-                    
-               
+                    /*
+                     * int i = Int32.Parse(x.key);
+                     * int index;
+                     * beacons.data[i].update(x.Object);
+                     * Point p = beacons.data[i].getXY(sensors);
+                     * if (p.y >= 3 && p.y <=5) {add = 0};
+                     * if (p.y >= 0 && p.y <= 2) {add = 6};
+                     * 
+                     * index = (int)Math.Floor(p.x / 1.5) + add;
+                     * if (map[i] != index) {
+                     *     G.FillRectangle(myBrush, rect[map[i]]);
+                     *     G.FillRectangle(myBrush2, rect[index]]);
+                     * }
+                     * map[i] = index;
+                     */
+
+
                 });
 
         }
