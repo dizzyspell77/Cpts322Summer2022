@@ -8,6 +8,7 @@ namespace Milestone_2_Progress
 {
     public class Sensors
     {
+        public int Total { get; set; }
         public Sensor[] data { get; set; }
 
         public Sensors(int size)

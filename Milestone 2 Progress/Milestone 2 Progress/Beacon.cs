@@ -45,6 +45,8 @@ namespace Milestone_2_Progress
             P.x = (C * E - F * B) / (E * A - B * D);
             P.y = (C * D - A * F) / (B * D - A * E);
 
+            Console.WriteLine($"(x,y)=({ P.x}, {P.y})");
+
             return P;
         }
 

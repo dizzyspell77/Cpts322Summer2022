@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Firebase.Database;
 using Firebase.Database.Query;
+using System.Net.Http;
 
 namespace Milestone_2_Progress
 {
@@ -114,6 +115,28 @@ namespace Milestone_2_Progress
                 Console.WriteLine($"beacon id: { beacon.Id} [{ beacon.D4}]");
             }
 
+        }
+
+        private static async Task sendData()
+        {
+            FormUrlEncodedContent content;
+            HttpResponseMessage response;
+            HttpClient httpclient = new HttpClient();
+            string responseString;
+            int companyId = 0;
+
+            var dictionary = new Dictionary<string, string>{
+                            { "key","{'occupied':[1,6]}"  },
+                            { "companyId",companyId.ToString()}
+                        };
+
+            content = new FormUrlEncodedContent(dictionary);
+            response = await httpclient.PostAsync("https://us-central1-heymotocarro-1a1d4.cloudfunctions.net/sendData", content);
+            responseString = await response.Content.ReadAsStringAsync();
+            Response data = Newtonsoft.Json.JsonConvert.DeserializeObject<Response>(responseString);
+            //Response message
+            Console.WriteLine(data.key);
+            Console.WriteLine(data.companyId);
         }
 
 

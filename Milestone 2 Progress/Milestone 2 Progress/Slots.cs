@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Milestone_2_Progress
 {
-    class Slots
+    public class Slots
     {
       
         public Slot[] data { get; set; }
@@ -24,6 +24,9 @@ namespace Milestone_2_Progress
         private int spot;
         public int Total { get; set; }
         public Rectangle[] rect;
+        int letter;
+        Graphics G;
+
         
         public void DrawRect(Graphics G)
         {
